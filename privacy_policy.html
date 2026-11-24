@@ -49,6 +49,7 @@
     .contact-box { background: #f0faf6; border: 1px solid #d0ede7; border-radius: 12px;
                    padding: 20px 24px; margin-top: 16px; }
     .contact-box p { margin-bottom: 6px; }
+    a { color: #0F6E56; }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee;
              font-size: 12px; color: #aaa; text-align: center; }
     @media (max-width: 600px) {
@@ -61,7 +62,6 @@
 </head>
 <body>
 <div class="container">
-
   <div class="header">
     <div class="logo">
       <div class="logo-icon">❤️</div>
@@ -69,9 +69,9 @@
     </div>
     <h1>Privacy Policy</h1>
     <p class="meta">
-      Effective date: 24 May 2026 &nbsp;·&nbsp;
-      Last updated: 25 August 2026 &nbsp;·&nbsp;
-      Version 2.1
+      Effective date: 24 November 2026 &nbsp;·&nbsp;
+      Last updated: 24 November 2026 &nbsp;·&nbsp;
+      Version 3.0
     </p>
   </div>
 
@@ -79,16 +79,19 @@
     <h3>Contents</h3>
     <ol>
       <li><a href="#overview">Overview and who we are</a></li>
+      <li><a href="#availability">Where VitaIQ is offered</a></li>
       <li><a href="#data-collected">Data we collect</a></li>
       <li><a href="#how-stored">How and where data is stored</a></li>
-      <li><a href="#how-used">How we use your data</a></li>
+      <li><a href="#ai">AI features and what is sent</a></li>
       <li><a href="#third-parties">Third-party services</a></li>
       <li><a href="#ads">Advertising</a></li>
+      <li><a href="#location">Location (Find Care)</a></li>
       <li><a href="#health-connect">Android Health Connect</a></li>
       <li><a href="#children">Children's privacy</a></li>
       <li><a href="#your-rights">Your rights</a></li>
-      <li><a href="#data-deletion">Data deletion</a></li>
+      <li><a href="#data-deletion">Deleting your data and account</a></li>
       <li><a href="#security">Security</a></li>
+      <li><a href="#medical">Medical disclaimer</a></li>
       <li><a href="#changes">Changes to this policy</a></li>
       <li><a href="#contact">Contact us</a></li>
     </ol>
@@ -96,281 +99,336 @@
 
   <h2 id="overview">1. Overview and who we are</h2>
   <p>
-    VitaIQ ("the app", "we", "us", "our") is a personal wellness tracking
-    application developed and operated by <strong>Dipankar Mukherjee</strong>,
-    an individual developer based in Kolkata, West Bengal, India,
-    trading as <strong>AruchaTech</strong>.
+    VitaIQ ("the app", "we", "us", "our") is a personal health and wellness
+    tracking application developed and operated by <strong>Dipankar Mukherjee</strong>,
+    an individual developer based in Kolkata, West Bengal, India, trading as
+    <strong>AruchaTech</strong>.
   </p>
   <p>
-    This Privacy Policy explains what personal data we collect, why we collect
-    it, how it is stored and protected, and what rights you have over it. By
-    using VitaIQ, you agree to the practices described in this policy.
+    VitaIQ is a tool to help you track habits, understand trends, and stay
+    organised. It is not a medical service, hospital, or clinic, and it does not
+    diagnose, treat, or replace professional medical advice. This Privacy Policy
+    explains what personal data we collect, why, how it is stored and protected,
+    and what rights you have over it. By using VitaIQ, you agree to the practices
+    described here.
   </p>
   <div class="highlight">
-    <strong>Plain-language summary:</strong> VitaIQ stores most of your health
-    data on your device only. We do not sell your data. We do not share
-    personally identifiable health information with advertisers. You can delete
-    all your data at any time from within the app.
+    <strong>Plain-language summary:</strong> VitaIQ stores your health data on
+    your device, not on our servers. A small amount of account data is stored in
+    the cloud so you can sign in. Some AI features send limited, de-identified
+    data for processing. We do not sell your data, and we do not use your health
+    data to target advertising. You can delete your data, or your whole account,
+    at any time from within the app.
   </div>
 
-  <h2 id="data-collected">2. Data we collect</h2>
+  <h2 id="availability">2. Where VitaIQ is offered</h2>
+  <p>
+    VitaIQ is offered in <strong>India and the United States</strong>. It is not
+    directed at, or offered to, users in the European Economic Area (EEA) or the
+    United Kingdom. If you access the app from outside India or the United States,
+    you do so on your own initiative and are responsible for compliance with your
+    local laws.
+  </p>
 
-  <h3>2.1 Data you provide directly</h3>
+  <h2 id="data-collected">3. Data we collect</h2>
+
+  <h3>3.1 Data you provide directly</h3>
   <table>
     <tr><th>Data type</th><th>Examples</th><th>Storage</th></tr>
-    <tr><td>Profile information</td><td>Name, age, gender, height, weight, waist and hip measurements, health goals</td><td>On-device (SQLite)</td></tr>
-    <tr><td>Daily health logs</td><td>Sleep hours, step count, water intake, mood, energy, stress level</td><td>On-device (SQLite)</td></tr>
-    <tr><td>Vital signs</td><td>Heart rate, SpO₂, blood pressure, respiratory rate, body temperature</td><td>On-device (SQLite)</td></tr>
-    <tr><td>Nutrition logs</td><td>Food name, brand, calories, protein, carbohydrates, fat, fibre, meal type, quantity</td><td>On-device (SQLite)</td></tr>
-    <tr><td>Exercise logs</td><td>Exercise type, duration, intensity, estimated calories burned, notes</td><td>On-device (SQLite)</td></tr>
-    <tr><td>Supplements</td><td>Supplement name, dosage, timing, frequency</td><td>On-device (SQLite)</td></tr>
-    <tr><td>Health records</td><td>Scanned document images, OCR-extracted text, medications, appointments, lab results</td><td>On-device (SQLite + local storage)</td></tr>
-    <tr><td>Lab results</td><td>Biomarker names, values, reference ranges, test dates</td><td>On-device (SQLite)</td></tr>
+    <tr><td>Profile information</td><td>Name, birth month and year (never the day), gender, height, weight, waist and hip measurements, health goals</td><td>On-device; name and birth month/year also in the cloud (see 4.2)</td></tr>
+    <tr><td>Daily health logs</td><td>Sleep, steps, water intake, mood</td><td>On-device only</td></tr>
+    <tr><td>Vital signs</td><td>Heart rate, SpO₂, blood pressure, respiratory rate, body temperature</td><td>On-device only</td></tr>
+    <tr><td>Nutrition logs</td><td>Food name, brand, calories, protein, carbohydrates, fat, fibre, meal type, quantity</td><td>On-device only</td></tr>
+    <tr><td>Exercise logs</td><td>Exercise type, duration, intensity, estimated calories, notes</td><td>On-device only</td></tr>
+    <tr><td>Supplements and medications</td><td>Name, dosage, timing, frequency; medications you add or that are extracted from scanned prescriptions</td><td>On-device only</td></tr>
+    <tr><td>Health records</td><td>Scanned document images, OCR-extracted text, appointments, lab results (biomarker names, values, reference ranges, dates)</td><td>On-device only</td></tr>
+    <tr><td>Health Risk Assessment (HRA)</td><td>Your individual answers are discarded as soon as results are calculated; only the resulting scores and risk categories (heart, diabetes, wellbeing, alcohol, cancer screening) are kept</td><td>Results on-device only</td></tr>
   </table>
 
-  <h3>2.2 Data collected automatically</h3>
+  <h3>3.2 Data collected automatically</h3>
   <table>
     <tr><th>Data type</th><th>Purpose</th><th>Storage</th></tr>
-    <tr><td>Crash reports</td><td>App stability and bug fixing</td><td>Firebase Crashlytics (Google servers)</td></tr>
-    <tr><td>Authentication data</td><td>Account creation and login (email, Google Sign-In)</td><td>Firebase Authentication (Google servers)</td></tr>
-    <tr><td>Subscription status</td><td>Determining your account tier (Guest / Free / Pro)</td><td>Firebase Firestore (Google servers)</td></tr>
-    <tr><td>AI chat disclaimer acknowledgment</td><td>Recording that you have read and accepted the health disclaimer</td><td>Firebase Firestore + on-device</td></tr>
-    <tr><td>Ad interaction data</td><td>Advertising (Free and Guest users only — see Section 6)</td><td>Google AdMob (Google servers)</td></tr>
+    <tr><td>Authentication data</td><td>Account creation and login (email or Google Sign-In)</td><td>Firebase Authentication (Google servers)</td></tr>
+    <tr><td>Account profile record</td><td>Your name, email, optional phone, subscription tier, account-creation timestamp, and the birth month and year used to calculate your age</td><td>Firebase Firestore (Google servers)</td></tr>
+    <tr><td>Disclaimer acceptance</td><td>Record that you read and accepted the health disclaimer (timestamp, app and disclaimer version)</td><td>Firebase Firestore + on-device</td></tr>
+    <tr><td>AI usage counters</td><td>A daily count of AI requests, used to enforce fair-use limits per tier</td><td>Firebase Firestore (count only; no message content)</td></tr>
+    <tr><td>Crash reports</td><td>App stability and bug fixing (release builds only)</td><td>Firebase Crashlytics (Google servers)</td></tr>
+    <tr><td>Advertising signals</td><td>Serving advertisements to Guest and Free users (see Section 7)</td><td>Google AdMob (Google servers)</td></tr>
   </table>
+  <p>
+    Crash reports are associated with your account identifier so we can diagnose
+    issues affecting your account; they include your device model, operating
+    system version, an installation identifier, and the technical details of the
+    error. We have not found any health data to be included in crash reports.
+  </p>
 
-  <h3>2.3 Data we do NOT collect</h3>
+  <h3>3.3 Data we do NOT collect</h3>
   <ul>
-    <li>We do not collect your precise GPS location (Find Care uses device GPS locally — it is not transmitted to our servers)</li>
-    <li>We do not collect your contacts, microphone, or camera content beyond document scanning</li>
-    <li>We do not collect financial or payment card information</li>
-    <li>We do not build advertising profiles from your health data</li>
-    <li>We do not share your personally identifiable health information with any third party for marketing purposes</li>
+    <li>We do not build advertising profiles from your health data, and we never pass health data to advertisers.</li>
+    <li>We do not collect your contacts, microphone, or camera content beyond the documents and meals you choose to scan.</li>
+    <li>We do not collect financial or payment-card information. (Subscription payments, when available, are handled entirely by Google Play.)</li>
+    <li>We do not use a separate analytics, attribution, or tracking SDK.</li>
+    <li>We do not continuously track your location; location is used only when you open the Find Care feature (see Section 8).</li>
   </ul>
 
-  <h2 id="how-stored">3. How and where data is stored</h2>
+  <h2 id="how-stored">4. How and where data is stored</h2>
 
-  <h3>3.1 On-device storage (SQLite)</h3>
+  <h3>4.1 On-device storage</h3>
   <p>
     The vast majority of your health data — logs, vitals, nutrition, exercise,
-    supplements, health records, and profile measurements — is stored exclusively
-    in a secure SQLite database on your device. This data does not leave
-    your phone unless you explicitly use the Backup feature or an AI feature
-    that requires data transmission (see Section 4).
+    supplements, medications, scanned records, lab results, and HRA results — is
+    stored only in a database on your device. This data does not leave your phone
+    except when you use the Backup feature, or an AI feature that requires
+    transmission (see Section 5). Android system backup is disabled for VitaIQ,
+    so your health data is not copied to Google Drive or Google One by the
+    operating system, and it is not restored automatically on a new device.
   </p>
 
-  <h3>3.2 Cloud storage (Firebase)</h3>
+  <h3>4.2 Cloud storage (Firebase)</h3>
   <p>
-    A minimal set of non-health data is stored in Firebase (Google Cloud
-    servers located in the United States and/or Europe):
+    If you register an account, a limited set of non-health data is stored in
+    Firebase (Google Cloud servers, which may be located in the United States or
+    other regions):
   </p>
   <ul>
-    <li>Your email address or Google account identifier (for login)</li>
-    <li>Your subscription tier (Guest / Free / Pro)</li>
-    <li>Timestamp of your health disclaimer acceptance</li>
-    <li>AI-generated weekly report (cached, no personally identifiable health data beyond averages)</li>
+    <li>Your Firebase account identifier, email or Google account ID, name, optional phone number, and subscription tier.</li>
+    <li>Your birth month and year (used to calculate your age on your device). We never store your full date of birth.</li>
+    <li>Your account-creation timestamp and your health-disclaimer acceptance record.</li>
+    <li>A daily AI-usage count (a number only — no message content, no health data).</li>
   </ul>
+  <p>
+    This cloud profile exists so you can sign in and restore your profile if you
+    reinstall the app or sign in on a new device. Your health data is not part of
+    this cloud profile.
+  </p>
 
-  <h3>3.3 Guest users</h3>
+  <h3>4.3 Guest users</h3>
   <div class="highlight">
-    Guest users are not logged in to Firebase. All data — including health logs,
-    profile, and BioAge calculations — is stored locally on the device only.
-    No cloud sync occurs for guest sessions.
+    You can use VitaIQ as a guest without registering. Guest health data is
+    stored only on your device. The first time a guest uses an AI feature, the app
+    creates an anonymous sign-in with Google Firebase so that AI requests can be
+    made and fair-use limits applied; this anonymous identity holds only a daily
+    AI-usage count and no personal or health data.
   </div>
 
-  <h2 id="how-used">4. How we use your data</h2>
+  <h2 id="ai">5. AI features and what is sent</h2>
   <p>
-    Some features require sending limited data to Google Gemini AI. In every
-    case, personally identifying details (name, age, hospital ID, referring
-    doctor, phone, email, Aadhaar, and lab reference numbers) are stripped
-    <strong>on your device</strong> before any data is transmitted. Full
-    details in Section 5.
+    Some features use artificial intelligence. All AI requests are sent through
+    VitaIQ's own secure server (a Google Cloud Function) to
+    <strong>Google Cloud Vertex AI</strong>; the app does not contain an AI key,
+    and your requests are authenticated through your sign-in. For features that
+    involve your health records, personally identifying details — such as your
+    name, age, hospital or patient ID, referring doctor, phone, email, and lab
+    reference numbers — are removed <strong>on your device</strong> before any
+    data is transmitted.
   </p>
   <table>
-    <tr><th>Purpose</th><th>Data used</th><th>Legal basis</th></tr>
-    <tr><td>Calculate Biological Age</td><td>Sleep, steps, water, mood, BMI, body fat %, WHR, nutrition, streak</td><td>Your consent (app usage)</td></tr>
-    <tr><td>Calculate Vita Score</td><td>Daily health logs</td><td>Your consent</td></tr>
-    <tr><td>Calculate Life Bank</td><td>Sleep, steps, water, mood logs</td><td>Your consent</td></tr>
-    <tr><td>AI Health Coach chat</td><td>Your message + a summary of recent health metrics (sleep, steps, water, mood, streak, age) sent to Google Gemini</td><td>Your consent</td></tr>
-    <tr><td>AI Food Scan (Pro)</td><td>Meal photo sent to Google Gemini Vision. Photo is not stored by us and is not linked to your account.</td><td>Your consent (Pro tier)</td></tr>
-    <tr><td>Lab Report AI Analysis (Pro)</td><td>Lab marker names, values, units, reference ranges sent to Google Gemini. All personally identifying details stripped on-device first.</td><td>Explicit one-time consent (revocable in Privacy Settings)</td></tr>
-    <tr><td>Prescription scan</td><td>OCR text from scanned prescription sent to Gemini to extract medications and appointments. Patient and doctor names stripped before sending.</td><td>Your consent</td></tr>
-    <tr><td>Find nearby healthcare (Find Care)</td><td>Approximate device location sent to Google Places API — not stored</td><td>Your consent (location permission)</td></tr>
-    <tr><td>Serving advertisements</td><td>Device identifiers (Free / Guest users only)</td><td>Legitimate interest / consent</td></tr>
-    <tr><td>App stability</td><td>Crash logs (no health data)</td><td>Legitimate interest</td></tr>
+    <tr><th>Feature</th><th>What is sent</th><th>Basis</th></tr>
+    <tr><td>AI Health Coach (Vera)</td><td>Your typed message plus a short summary of recent metrics (sleep, steps, water, mood, streak, age)</td><td>Your consent (app usage)</td></tr>
+    <tr><td>AI Food Scan (Pro)</td><td>The meal photo you take, to identify the food and estimate calories and macros. The photo is not stored by us and is not linked to your account.</td><td>Your consent (Pro tier)</td></tr>
+    <tr><td>Lab Report Analysis (Pro)</td><td>Lab marker names, values, units, and reference ranges, with identifying details stripped on-device first</td><td>Explicit one-time consent, revocable in Profile → Privacy Settings</td></tr>
+    <tr><td>Prescription scan</td><td>OCR text from a scanned prescription, to extract medications and appointments; patient and doctor names are stripped before sending</td><td>Your consent</td></tr>
+    <tr><td>HRA interpretation (Pro)</td><td>Once per assessment: your heart, diabetes and alcohol results, recommended screenings, and your 14-day averages for sleep, steps and water. Recent lab values (e.g. cholesterol, blood sugar) are included only if you have already agreed to Lab Report Analysis. Your mood and anxiety results, and your individual answers, are never sent.</td><td>Your consent (Pro tier)</td></tr>
   </table>
+  <p>
+    AI responses are informational only and are not medical advice. Data sent for
+    AI processing is handled by Google under its applicable terms and retention
+    policies and cannot be individually recalled once sent.
+  </p>
 
-  <h2 id="third-parties">5. Third-party services</h2>
+  <h2 id="third-parties">6. Third-party services</h2>
   <p>VitaIQ uses the following third-party services. Each has its own privacy policy.</p>
   <table>
     <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data shared</th></tr>
     <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Account login</td><td>Email or Google account ID</td></tr>
-    <tr><td>Firebase Firestore</td><td>Google LLC</td><td>Subscription tier, disclaimer timestamp</td><td>Tier status, acceptance timestamp</td></tr>
-    <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting</td><td>Device model, OS version, crash stack trace (no health data)</td></tr>
-    <tr><td>Google Gemini AI</td><td>Google LLC</td><td>AI Health Coach, lab report analysis (Pro), food scan (Pro), prescription extraction</td><td>Chat messages, stripped lab values, meal photos, stripped prescription text. Personally identifying details (name, hospital ID, phone, email, doctor name, Aadhaar) are stripped on-device before transmission. Data processed under <a href="https://ai.google.dev/gemini-api/terms" style="color:#0F6E56" target="_blank">Google Gemini API terms</a>.</td></tr>
-    <tr><td>Google AdMob</td><td>Google LLC</td><td>Advertising (Free + Guest users only)</td><td>Device advertising ID, app usage signals</td></tr>
-    <tr><td>Google Places API</td><td>Google LLC</td><td>Find Care — nearby hospitals and clinics</td><td>Device location (query only, not stored by us)</td></tr>
-    <tr><td>Google MLKit</td><td>Google LLC</td><td>OCR text recognition from health documents</td><td>Processed on-device only — not transmitted</td></tr>
-    <tr><td>Open Food Facts</td><td>Open Food Facts (non-profit)</td><td>Food nutrition database for nutrition logging</td><td>Search query text only</td></tr>
-    <tr><td>Android Health Connect</td><td>Google LLC / Device OEM</td><td>Sync health data from wearables</td><td>Steps, heart rate, sleep data (read only, stored on-device)</td></tr>
+    <tr><td>Firebase Firestore</td><td>Google LLC</td><td>Account profile, tier, disclaimer record, AI-usage count</td><td>The fields listed in Section 4.2</td></tr>
+    <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting (release builds)</td><td>Device model, OS version, installation ID, error details, and your account identifier (no health data)</td></tr>
+    <tr><td>Google Cloud Vertex AI</td><td>Google LLC</td><td>AI Health Coach, lab analysis, food scan, prescription extraction, HRA interpretation</td><td>The de-identified data listed in Section 5, via VitaIQ's own server</td></tr>
+    <tr><td>Google AdMob</td><td>Google LLC</td><td>Advertising (Guest and Free users only)</td><td>Device advertising ID, ad-request signals (no health data)</td></tr>
+    <tr><td>Google Places API</td><td>Google LLC</td><td>Find Care — nearby hospitals and clinics</td><td>Your location when you use the feature (see Section 8)</td></tr>
+    <tr><td>Google ML Kit</td><td>Google LLC</td><td>OCR text recognition from scanned documents</td><td>Processed on-device only — not transmitted</td></tr>
+    <tr><td>Open Food Facts</td><td>Open Food Facts (non-profit)</td><td>Food and nutrition lookups</td><td>Barcode numbers and typed food searches (no account identifier)</td></tr>
+    <tr><td>Android Health Connect</td><td>Google LLC / device maker</td><td>Reading health data from wearables</td><td>Read-only; stored on your device (see Section 9)</td></tr>
   </table>
   <p>
-    Google's privacy policy applies to all Google services listed above:
-    <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    Google's privacy policy applies to all Google services above:
+    <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.
   </p>
 
-  <h2 id="ads">6. Advertising</h2>
+  <h2 id="ads">7. Advertising</h2>
   <p>
-    VitaIQ displays advertisements to <strong>Guest and Free tier users only</strong>.
-    Pro subscribers see zero advertisements.
+    VitaIQ shows advertisements to <strong>Guest and Free users only</strong>.
+    Pro subscribers see no advertisements.
   </p>
   <p>
-    Advertisements are served by <strong>Google AdMob</strong>. AdMob may use
-    your device's advertising identifier (GAID on Android) to serve
-    interest-based advertisements. We do not pass any health data to AdMob.
-    AdMob's data practices are governed by Google's privacy policy.
-  </p>
-  <p>
-    You can opt out of interest-based ads by going to your device
-    <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>.
+    Advertisements are served by <strong>Google AdMob</strong>, which may use your
+    device's advertising identifier to serve personalised advertisements. We do
+    not pass any health data to AdMob, and we do not build advertising profiles
+    from your health data. You can reset or limit your advertising ID, or opt out
+    of personalised ads, in your device <strong>Settings → Google → Ads</strong>.
   </p>
 
-  <h2 id="health-connect">7. Android Health Connect</h2>
+  <h2 id="location">8. Location (Find Care)</h2>
   <p>
-    VitaIQ can optionally read health data from Android Health Connect,
-    which aggregates data from wearable devices (Samsung Health, Google Fit,
-    Garmin Connect, Fitbit, and others).
+    The Find Care feature helps you find nearby hospitals, clinics, and healthcare
+    providers. When you open Find Care, the app requests your device location and
+    sends it to the Google Places API to retrieve nearby results. Find Care uses
+    precise (GPS) location for accuracy.
   </p>
-  <p>We request read access to the following Health Connect data types:</p>
+  <div class="highlight">
+    We do not send your location to our own servers. Find Care results are cached
+    on your device for about 24 hours to speed up repeat use; this cache is stored
+    only on your phone and is cleared when you delete your data. Location access is
+    requested only when you use Find Care, and you can revoke it at any time in
+    your device settings.
+  </div>
+
+  <h2 id="health-connect">9. Android Health Connect</h2>
+  <p>
+    VitaIQ can optionally read health data from Android Health Connect, which
+    aggregates data from wearables and other apps (Samsung Health, Google Fit,
+    Garmin, Fitbit, and others). We request <strong>read-only</strong> access to
+    the following data types:
+  </p>
   <ul>
     <li>Steps</li>
+    <li>Sleep</li>
     <li>Heart rate</li>
-    <li>Sleep sessions</li>
+    <li>Hydration</li>
+    <li>Total calories burned</li>
+    <li>Distance</li>
+    <li>Exercise / active time</li>
     <li>Blood oxygen (SpO₂)</li>
     <li>Blood pressure</li>
     <li>Respiratory rate</li>
     <li>Body temperature</li>
   </ul>
   <div class="highlight">
-    Health Connect data is read and stored locally on your device only.
-    It is never uploaded to our servers. You can revoke Health Connect
-    permissions at any time from your device Settings → Health Connect → App permissions.
+    Health Connect data is read and stored on your device only. It is never
+    uploaded to our servers or shared with third parties. You can revoke Health
+    Connect permissions at any time in your device Settings → Health Connect →
+    App permissions.
   </div>
   <p>
-    VitaIQ's use of Health Connect APIs complies with the
-    <a href="https://developer.android.com/health-and-fitness/guides/health-connect/publish/prepare-for-review" target="_blank">
-      Health Connect Permissions Policy</a>.
-    Health data obtained via Health Connect is used solely to display your
-    health metrics within VitaIQ and is not shared with third parties.
+    VitaIQ's use of Health Connect complies with the
+    <a href="https://developer.android.com/health-and-fitness/guides/health-connect/publish/prepare-for-review" target="_blank">Health Connect permissions policy</a>.
+    Health data obtained via Health Connect is used solely to display your health
+    metrics within VitaIQ.
   </p>
 
-  <h2 id="children">8. Children's privacy</h2>
+  <h2 id="children">10. Children's privacy</h2>
   <p>
-    VitaIQ is not directed at children under the age of 13 (or 16 in the
-    European Union). We do not knowingly collect personal data from children.
-    If you believe a child has provided us with personal data, please contact
-    us immediately and we will delete it.
+    VitaIQ is not intended for use by children under the age of 13. We do not
+    knowingly collect personal data from children under 13. If you believe a child
+    has provided us with personal data, please contact us and we will delete it.
   </p>
 
-  <h2 id="your-rights">9. Your rights</h2>
+  <h2 id="your-rights">11. Your rights</h2>
   <p>
-    Under India's <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>
-    and applicable international frameworks, you have the following rights:
+    Under India's <strong>Digital Personal Data Protection Act, 2023</strong> and
+    other applicable laws, you have the following rights:
   </p>
   <table>
     <tr><th>Right</th><th>What it means</th><th>How to exercise</th></tr>
-    <tr><td>Right to access</td><td>Know what data we hold about you</td><td>Email us at support.vitaiq@gmail.com</td></tr>
-    <tr><td>Right to correction</td><td>Correct inaccurate personal data</td><td>Profile screen → Edit profile</td></tr>
-    <tr><td>Right to erasure</td><td>Delete all your data</td><td>Profile screen → Delete all my data (see Section 10)</td></tr>
-    <tr><td>Right to data portability</td><td>Export your data</td><td>Profile → Backup & Restore → Export JSON</td></tr>
-    <tr><td>Right to withdraw consent</td><td>Stop using the app and delete your data</td><td>Delete all data + uninstall app. AI consent can be revoked individually in Profile → Privacy Settings.</td></tr>
-    <tr><td>Right to grievance redressal</td><td>Raise a complaint about data handling</td><td>Email us — we respond within 30 days</td></tr>
+    <tr><td>Access</td><td>Know what data we hold about you</td><td>Email support.vitaiq@gmail.com</td></tr>
+    <tr><td>Correction</td><td>Correct inaccurate personal data</td><td>Profile → Edit profile</td></tr>
+    <tr><td>Erasure</td><td>Delete your data, or your whole account</td><td>Profile → Delete all my data, or Delete my account (see Section 12)</td></tr>
+    <tr><td>Portability</td><td>Export your data</td><td>Profile → Backup &amp; Restore</td></tr>
+    <tr><td>Withdraw consent</td><td>Stop AI processing or delete your data</td><td>Revoke AI consent in Profile → Privacy Settings; or delete your data/account</td></tr>
+    <tr><td>Grievance redressal</td><td>Raise a complaint about data handling</td><td>Email us — we respond within 30 days</td></tr>
   </table>
 
-  <h2 id="data-deletion">10. Data deletion</h2>
-  <p>You can delete all your data at any time directly from within the app:</p>
-  <ol>
-    <li>Open VitaIQ</li>
-    <li>Tap <strong>Profile</strong> (bottom navigation)</li>
-    <li>Scroll to the bottom</li>
-    <li>Tap <strong>Delete all my data</strong></li>
-    <li>Confirm the deletion</li>
-  </ol>
-  <p>This action permanently deletes:</p>
-  <ul>
-    <li>All health logs, vitals, nutrition, exercise, and supplement data from your device</li>
-    <li>Your profile information from your device</li>
-    <li>Your Firebase account and subscription record</li>
-    <li>Your disclaimer acceptance record</li>
-    <li>All AI consent records</li>
-  </ul>
+  <h2 id="data-deletion">12. Deleting your data and account</h2>
+  <p>VitaIQ gives you two separate options in <strong>Profile</strong>:</p>
+  <h3>Delete all my data</h3>
+  <p>
+    This permanently erases all health data stored on your device — logs, vitals,
+    nutrition, exercise, supplements, medications, scanned records, lab results,
+    and HRA results — and signs you out. It affects this device only and does not
+    delete your account; you can sign back in.
+  </p>
+  <h3>Delete my account</h3>
+  <p>
+    This permanently and immediately removes your entire account: your sign-in,
+    your cloud profile, your AI-usage records, and all health data on the device.
+    You are asked to confirm your sign-in first, and the action cannot be undone.
+    Other accounts on the same device are not affected.
+  </p>
+  <p>
+    You can also request deletion by emailing
+    <strong>support.vitaiq@gmail.com</strong>, or follow the instructions on our
+    <a href="delete-account.html">account deletion page</a>. We action email
+    requests within 30 days.
+  </p>
   <div class="warning">
-    <strong>Note:</strong> Deletion of on-device SQLite data is immediate and
-    irreversible. Firebase account deletion may take up to 30 days to fully
-    propagate across Google's systems. Crash logs held by Firebase Crashlytics
-    are retained for 90 days per Google's standard policy and cannot be
-    individually deleted. Data already sent to Google Gemini for AI processing
-    is subject to Google's retention policies and cannot be individually recalled.
+    <strong>Please note:</strong> deletion of on-device data is immediate and
+    irreversible. Crash reports already sent to Firebase Crashlytics are retained
+    for up to 90 days under Google's standard policy and are then deleted. Data
+    already sent to Google for AI processing is subject to Google's retention
+    policies and cannot be individually recalled. Backups you chose to save outside
+    the app (for example to Drive, email, or Downloads) are under your control and
+    are not affected by deletion.
   </div>
-  <p>
-    You may also request data deletion by emailing
-    <strong>support.vitaiq@gmail.com</strong>. We will process your request
-    within 30 days.
-  </p>
 
-  <h2 id="security">11. Security</h2>
-  <p>We implement the following security measures to protect your data:</p>
+  <h2 id="security">13. Security</h2>
   <ul>
-    <li><strong>On-device secure storage:</strong> Sensitive credentials and API keys are stored using Flutter Secure Storage (Android Keystore)</li>
-    <li><strong>HTTPS only:</strong> All network communications use TLS encryption</li>
-    <li><strong>PII stripping:</strong> Personally identifying details are removed on-device before any data is sent to Google Gemini</li>
-    <li><strong>Explicit consent:</strong> Lab report AI analysis requires one-time explicit consent, revocable at any time</li>
-    <li><strong>Code obfuscation:</strong> Release builds are obfuscated to protect intellectual property and reduce attack surface</li>
-    <li><strong>Firebase Security Rules:</strong> Firestore data is access-controlled per authenticated user</li>
-    <li><strong>Crash reporting without health data:</strong> Firebase Crashlytics is configured to exclude health information from crash reports</li>
+    <li><strong>On-device storage:</strong> sensitive credentials are stored using the Android Keystore via secure storage.</li>
+    <li><strong>HTTPS only:</strong> all network communication uses TLS encryption.</li>
+    <li><strong>No AI key in the app:</strong> all AI requests go through our own authenticated server to Google Cloud Vertex AI, so no AI key is embedded in the app.</li>
+    <li><strong>On-device de-identification:</strong> identifying details are removed on your device before any health-record data is sent for AI processing.</li>
+    <li><strong>Explicit consent:</strong> Lab Report AI analysis requires one-time explicit consent, revocable at any time.</li>
+    <li><strong>Access control:</strong> Firebase data is access-controlled per authenticated user.</li>
+    <li><strong>Obfuscated builds:</strong> release builds are obfuscated to reduce the attack surface.</li>
   </ul>
   <p>
-    Despite these measures, no method of electronic storage or transmission
-    is 100% secure. We cannot guarantee absolute security of your data.
+    No method of electronic storage or transmission is completely secure, and we
+    cannot guarantee absolute security.
   </p>
 
-  <h2 id="changes">12. Changes to this policy</h2>
+  <h2 id="medical">14. Medical disclaimer</h2>
+  <div class="warning">
+    VitaIQ is not a medical device and does not provide medical advice, diagnosis,
+    or treatment. All content — including AI-generated insights, biological-age
+    estimates, Life Bank, health scores, and HRA results — is for informational
+    and motivational purposes only. Always consult a qualified healthcare
+    professional before making any health or medication decisions, and never
+    disregard professional medical advice because of something in this app. You
+    are responsible for verifying any medication details extracted from a scan
+    against your doctor's actual prescription.
+  </div>
+
+  <h2 id="changes">15. Changes to this policy</h2>
   <p>
     We may update this Privacy Policy from time to time. When we make material
-    changes, we will notify you within the app and update the "Last updated"
-    date at the top of this document.
+    changes, we will notify you within the app and update the "Last updated" date
+    above. Continued use of VitaIQ after changes are posted constitutes acceptance
+    of the updated policy. Previous versions are available on request.
   </p>
-  <p>
-    Continued use of VitaIQ after changes are posted constitutes your
-    acceptance of the updated policy.
-  </p>
-  <p>Previous versions of this policy are available on request.</p>
 
-  <h2 id="contact">13. Contact us</h2>
+  <h2 id="contact">16. Contact us</h2>
   <p>
-    If you have any questions, concerns, or requests regarding this Privacy
-    Policy or your personal data, please contact us:
+    If you have any questions, concerns, or requests regarding this Privacy Policy
+    or your personal data, please contact us:
   </p>
   <div class="contact-box">
     <p><strong>Developer:</strong> Dipankar Mukherjee (trading as AruchaTech)</p>
-    <p><strong>App:</strong> VitaIQ — AI Health &amp; Longevity Command Centre</p>
+    <p><strong>App:</strong> VitaIQ</p>
     <p><strong>Email:</strong> <a href="mailto:support.vitaiq@gmail.com">support.vitaiq@gmail.com</a></p>
     <p><strong>Location:</strong> Kolkata, West Bengal, India</p>
-    <p><strong>Response time:</strong> Within 30 days of receiving your request</p>
+    <p><strong>Response time:</strong> within 30 days of receiving your request</p>
     <p style="margin-top:12px;font-size:13px;color:#666;">
-      For disputes arising from this policy, the courts of Kolkata,
-      West Bengal, India shall have exclusive jurisdiction and the laws
-      of India shall apply.
+      For disputes arising from this policy, the courts of Kolkata, West Bengal,
+      India shall have exclusive jurisdiction, and the laws of India shall apply.
     </p>
   </div>
 
   <footer>
     <p>© 2026 Dipankar Mukherjee · AruchaTech · VitaIQ · All rights reserved</p>
     <p style="margin-top:4px;">
-      This policy was last updated on 25 August 2026 and supersedes all
-      previous versions.
+      This policy was last updated on 24 November 2026 and supersedes all previous
+      versions.
     </p>
   </footer>
-
 </div>
 </body>
 </html>

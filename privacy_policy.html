@@ -69,9 +69,9 @@
     </div>
     <h1>Privacy Policy</h1>
     <p class="meta">
-      Effective date: 24 November 2026 &nbsp;·&nbsp;
-      Last updated: 24 November 2026 &nbsp;·&nbsp;
-      Version 3.0
+      Effective date: 28 November 2026 &nbsp;·&nbsp;
+      Last updated: 28 November 2026 &nbsp;·&nbsp;
+      Version 3.1
     </p>
   </div>
 
@@ -214,27 +214,39 @@
 
   <h2 id="ai">5. AI features and what is sent</h2>
   <p>
-    Some features use artificial intelligence. All AI requests are sent through
-    VitaIQ's own secure server (a Google Cloud Function) to
-    <strong>Google Cloud Vertex AI</strong>; the app does not contain an AI key,
-    and your requests are authenticated through your sign-in. For features that
-    involve your health records, personally identifying details — such as your
-    name, age, hospital or patient ID, referring doctor, phone, email, and lab
-    reference numbers — are removed <strong>on your device</strong> before any
-    data is transmitted.
+    When you use an AI feature (Vera, the AI health coach; lab analysis;
+    prescription scan; food scan; Health Risk Assessment interpretation), VitaIQ
+    sends what that feature needs to <strong>Google Cloud</strong> through
+    VitaIQ's own secure server (a Google Cloud Function). There is no AI key in
+    the app, and your requests are authenticated through your sign-in.
+  </p>
+  <p>
+    Before sending lab-report or prescription text, VitaIQ attempts to remove
+    common identifying details on your device — such as your name, age, hospital
+    or patient ID, referring doctor, phone, email and address where they appear
+    in standard labelled formats. This removal is automatic and best-effort:
+    because reports vary widely in layout, VitaIQ cannot guarantee that every
+    identifier in every format is removed. We recommend you avoid scanning
+    documents containing identity or financial details you do not wish to share.
+  </p>
+  <p>
+    The original scanned image of a report or prescription never leaves your
+    device — only the extracted, filtered text is sent. VitaIQ's server records
+    only usage counts, never the content of your requests.
   </p>
   <table>
     <tr><th>Feature</th><th>What is sent</th><th>Basis</th></tr>
     <tr><td>AI Health Coach (Vera)</td><td>Your typed message plus a short summary of recent metrics (sleep, steps, water, mood, streak, age)</td><td>Your consent (app usage)</td></tr>
     <tr><td>AI Food Scan (Pro)</td><td>The meal photo you take, to identify the food and estimate calories and macros. The photo is not stored by us and is not linked to your account.</td><td>Your consent (Pro tier)</td></tr>
-    <tr><td>Lab Report Analysis (Pro)</td><td>Lab marker names, values, units, and reference ranges, with identifying details stripped on-device first</td><td>Explicit one-time consent, revocable in Profile → Privacy Settings</td></tr>
-    <tr><td>Prescription scan</td><td>OCR text from a scanned prescription, to extract medications and appointments; patient and doctor names are stripped before sending</td><td>Your consent</td></tr>
+    <tr><td>Lab Report Analysis (Pro)</td><td>The text read from your report, after best-effort removal of identifying details on your device, to find lab values, units and reference ranges</td><td>Explicit one-time consent, revocable in Profile → Privacy Settings</td></tr>
+    <tr><td>Prescription scan</td><td>The text read from a scanned prescription, after best-effort removal of identifying details on your device, to extract medications and appointments</td><td>Your consent</td></tr>
     <tr><td>HRA interpretation (Pro)</td><td>Once per assessment: your heart, diabetes and alcohol results, recommended screenings, and your 14-day averages for sleep, steps and water. Recent lab values (e.g. cholesterol, blood sugar) are included only if you have already agreed to Lab Report Analysis. Your mood and anxiety results, and your individual answers, are never sent.</td><td>Your consent (Pro tier)</td></tr>
   </table>
   <p>
-    AI responses are informational only and are not medical advice. Data sent for
-    AI processing is handled by Google under its applicable terms and retention
-    policies and cannot be individually recalled once sent.
+    VitaIQ never adds your account name or email, or your full health history, to
+    an AI request. AI responses are informational only and are not medical advice.
+    Data sent for AI processing is handled by Google under its applicable terms and
+    retention policies and cannot be individually recalled once sent.
   </p>
 
   <h2 id="third-parties">6. Third-party services</h2>
@@ -244,7 +256,7 @@
     <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Account login</td><td>Email or Google account ID</td></tr>
     <tr><td>Firebase Firestore</td><td>Google LLC</td><td>Account profile, tier, disclaimer record, AI-usage count</td><td>The fields listed in Section 4.2</td></tr>
     <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting (release builds)</td><td>Device model, OS version, installation ID, error details, and your account identifier (no health data)</td></tr>
-    <tr><td>Google Cloud Vertex AI</td><td>Google LLC</td><td>AI Health Coach, lab analysis, food scan, prescription extraction, HRA interpretation</td><td>The de-identified data listed in Section 5, via VitaIQ's own server</td></tr>
+    <tr><td>Google Cloud</td><td>Google LLC</td><td>AI Health Coach, lab analysis, food scan, prescription extraction, HRA interpretation</td><td>The data listed in Section 5 (identifying details removed on-device, best-effort), via VitaIQ's own server</td></tr>
     <tr><td>Google AdMob</td><td>Google LLC</td><td>Advertising (Guest and Free users only)</td><td>Device advertising ID, ad-request signals (no health data)</td></tr>
     <tr><td>Google Places API</td><td>Google LLC</td><td>Find Care — nearby hospitals and clinics</td><td>Your location when you use the feature (see Section 8)</td></tr>
     <tr><td>Google ML Kit</td><td>Google LLC</td><td>OCR text recognition from scanned documents</td><td>Processed on-device only — not transmitted</td></tr>
@@ -383,8 +395,8 @@
   <ul>
     <li><strong>On-device storage:</strong> sensitive credentials are stored using the Android Keystore via secure storage.</li>
     <li><strong>HTTPS only:</strong> all network communication uses TLS encryption.</li>
-    <li><strong>No AI key in the app:</strong> all AI requests go through our own authenticated server to Google Cloud Vertex AI, so no AI key is embedded in the app.</li>
-    <li><strong>On-device de-identification:</strong> identifying details are removed on your device before any health-record data is sent for AI processing.</li>
+    <li><strong>No AI key in the app:</strong> all AI requests go through our own authenticated server to Google Cloud, so no AI key is embedded in the app.</li>
+    <li><strong>On-device de-identification:</strong> before any lab-report or prescription text is sent for AI processing, VitaIQ attempts to remove common identifying details on your device (best-effort; see Section 5).</li>
     <li><strong>Explicit consent:</strong> Lab Report AI analysis requires one-time explicit consent, revocable at any time.</li>
     <li><strong>Access control:</strong> Firebase data is access-controlled per authenticated user.</li>
     <li><strong>Obfuscated builds:</strong> release builds are obfuscated to reduce the attack surface.</li>
@@ -434,7 +446,7 @@
   <footer>
     <p>© 2026 AruchaTech · VitaIQ · All rights reserved</p>
     <p style="margin-top:4px;">
-      This policy was last updated on 24 November 2026 and supersedes all previous
+      This policy was last updated on 28 November 2026 and supersedes all previous
       versions.
     </p>
   </footer>
